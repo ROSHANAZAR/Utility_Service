@@ -1,0 +1,29 @@
+{
+  "name": "utility-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:build": "rimraf build && npm run clean -ws",
+    "clean:install": "rimraf package-lock.json &&rimraf node_modules",
+    "clean": "npm run clean:build && npm run clean:install",
+    "build": "npm run build -ws && tsc",
+    "start": "node build/index.js"
+  },
+  "workspaces": [
+    "packages/utilityService"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "@types/qrcode": "^1.5.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
