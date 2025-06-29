@@ -1,6 +1,4 @@
-import {test,qrService} from "@packages/utilityservice"
-console.log("Hello, world!");
-console.log(test());
+import {qrService} from "@packages/utilityservice"
 
 qrService.encodeQrCode("https://www.google.com", "example-qr.png")
   .then(() => console.log("QR Code generated successfully"))
